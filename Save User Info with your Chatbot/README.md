@@ -22,7 +22,6 @@ Steps
 - How to set up follow-up intents for a seamless conversational experience.
 - How to integrate AWS Lambda with Amazon Lex for backend processing.
 
-Author
 Arjun Singh  
 NextWork Student  
 [NextWork.org](https://nextwork.org)
