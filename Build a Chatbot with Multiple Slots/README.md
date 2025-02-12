@@ -1,38 +1,53 @@
- Banking Query Chatbot with Amazon Lex
+# Banking Query Chatbot with Amazon Lex
 
-This project demonstrates building a banking query chatbot using Amazon Lex, AWS Lambda, and AWS CloudFormation. The chatbot handles common customer queries like account balance, transaction history, loan information, and funds transfer.
+This project demonstrates building a banking query chatbot using **Amazon Lex**, **AWS Lambda**, and **AWS CloudFormation**. The chatbot handles common customer queries like account balance, transaction history, loan information, and funds transfer.
 
- Features
+## Features
 
- Intents:
-     `CheckBalance`: Retrieves account balance.
-     `GetTransactions`: Fetches recent transaction history.
-     `LoanInformation`: Provides details on loans.
-     `TransferFunds`: Handles money transfers between accounts.
- Slots:
-     `AccountNumber`: Captures and validates account numbers.
-     `Amount`: Handles monetary values for transfers.
- Lambda Integration:  Lambda functions process the intents and interact with a backend banking system (simulated in this project).
- CloudFormation: Automates the deployment of Lex bots and Lambda functions for consistent and scalable infrastructure.
+### Intents:
+- **`CheckBalance`**: Retrieves account balance.
+- **`GetTransactions`**: Fetches recent transaction history.
+- **`LoanInformation`**: Provides details on loans.
+- **`TransferFunds`**: Handles money transfers between accounts.
 
- Challenges
+### Slots:
+- **`AccountNumber`**: Captures and validates account numbers.
+- **`Amount`**: Handles monetary values for transfers.
 
- Integration with Banking Systems: Mapping intents and ensuring smooth communication between Lambda functions and the database required careful consideration.
+### Lambda Integration:
+- Lambda functions process the intents and interact with a backend banking system (simulated in this project).
 
- Project Timeline
+### CloudFormation:
+- Automates the deployment of Lex bots and Lambda functions for consistent and scalable infrastructure.
 
- Initial Chatbot Setup: ~2 hours
- CloudFormation Automation: ~10 minutes
+## Challenges
 
- Error Encountered
+- **Integration with Banking Systems**: Mapping intents and ensuring smooth communication between Lambda functions and the database required careful consideration.
 
- Lambda Function Not Attached: After initial deployment, the Lambda function was not correctly linked to the intent, causing the bot to fail. This was resolved by re-attaching the function and redeploying.
+## Project Timeline
 
- Key Learnings
+- **Initial Chatbot Setup**: ~2 hours
+- **CloudFormation Automation**: ~10 minutes
 
- Multiple Slot Usage: The `TransferFunds` intent showcases using the same slot type (`AccountNumber`) multiple times to capture both source and destination accounts.
- Confirmation Prompts: Implementing confirmation prompts enhances accuracy by verifying user inputs before processing.
- Lex Features: Explored Lex's conversation flow feature and visual builder for designing and managing chatbot interactions.
- CloudFormation Automation: Learned to define and provision AWS infrastructure using CloudFormation templates, ensuring repeatability and scalability.
+## Error Encountered
 
-This project provides a solid foundation for building more complex and feature-rich conversational interfaces for banking and other domains.
+- **Lambda Function Not Attached**: After initial deployment, the Lambda function was not correctly linked to the intent, causing the bot to fail. This was resolved by re-attaching the function and redeploying.
+
+## Key Learnings
+
+- **Multiple Slot Usage**: The `TransferFunds` intent showcases using the same slot type (`AccountNumber`) multiple times to capture both source and destination accounts.
+- **Confirmation Prompts**: Implementing confirmation prompts enhances accuracy by verifying user inputs before processing.
+- **Lex Features**: Explored Lex's conversation flow feature and visual builder for designing and managing chatbot interactions.
+- **CloudFormation Automation**: Learned to define and provision AWS infrastructure using CloudFormation templates, ensuring repeatability and scalability.
+
+## How to Run This Project
+
+1. **Set Up Amazon Lex**: Create a new Amazon Lex bot in the AWS Console.
+2. **Define Intents & Slots**: Set up the intents (`CheckBalance`, `GetTransactions`, etc.) and associated slots.
+3. **Integrate with AWS Lambda**: Link Lambda functions to the intents to process user requests.
+4. **Use CloudFormation**: Provision the entire infrastructure using CloudFormation templates for easy deployment and scalability.
+5. **Test the Chatbot**: Validate the bot using Amazon Lex's built-in tester.
+
+---
+
+This project serves as a solid foundation for building more complex and feature-rich conversational interfaces for banking and other domains.
